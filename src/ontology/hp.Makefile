@@ -281,7 +281,7 @@ reports/calcified-phenotypes.tsv: $(SRC)
 	$(ROBOT) query -f csv -i $< --query ../sparql/calcified-phenotypes.sparql $@
 	
 reports/layperson-synonyms.tsv: $(SRC)
-	$(ROBOT) query -f csv -i $< --query ../sparql/layperson-synonyms.sparql $@
+	$(ROBOT) query -f tsv -i $< --query ../sparql/layperson-synonyms.sparql $@
 
 qc: test
 	sh ../scripts/hp-qc-pipeline.sh ../ontology
